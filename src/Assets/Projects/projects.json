@@ -1,0 +1,44 @@
+[
+    {
+        "imgPath": "nsfw-detector.png",
+        "isBlog": false,
+        "title": "URL NSFW Detector",
+        "description": "A simple URL NSFW Detector that uses the Prebuilt model to detect if a URL is NSFW or not using the Screenshot of the first render of the page",
+        "link": "https://is-this-url-nsfw.herokuapp.com/"
+    },
+    {
+        "imgPath": "express-postgres-login.png",
+        "title": "Minimal User Handling using Express.js and PostgreSQL",
+        "description": "A minimal user handling app using Express.js and PostgreSQL",
+        "isBlog": true,
+        "link": "https://dev.to/cstayyab/minimal-user-management-using-express-and-postgresql-2bh9"
+    },
+    {
+        "imgPath": "wait-for-it.webp",
+        "title": "wait-for-it.js",
+        "description": "A JavaScript Library that allows you to execute function when a certain element gets added to the document",
+        "isBlog": true,
+        "link": "https://dev.to/cstayyab/let-me-wait-for-it-and-call-you-back-said-wait-for-it-js-50h1"
+    },
+    {
+        "imgPath": "load-css.png",
+        "title": "load.css",
+        "description": "A set of purely CSS-Based Loading Animations",
+        "isBlog": false,
+        "link": "https://cstayyab.github.io/load.css/"
+    }, 
+    {
+        "imgPath": "beemy.webp",
+        "title": "Beemy BMI Calculator",
+        "description": "A cute and little Body Mass Index calculator using Flutter",
+        "isBlog": false,
+        "link": "https://play.google.com/store/apps/details?id=com.cstayyab.beemy"
+    },
+    {
+        "imgPath": "walc.png",
+        "title": "WALC - unofficial WhatsApp Desktop Client for Linux Desktops",
+        "description": "A WhatsApp Desktop client for linux systems. This is an unofficial client. Use https://web.whatsapp.com for official web client as official desktop client for linux does not exist.",
+        "isBlog": false,
+        "link": "https://github.com/WAClient/WALC"
+    }
+]

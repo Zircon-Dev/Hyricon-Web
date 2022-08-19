@@ -1,39 +1,39 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+import React from 'react';
 
-import projects from "../../Assets/Projects/projects.json";
+import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import { projects } from '../../constants/constants';
 
-function Projects() {
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          Our <strong className="purple">Projects </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here Are A Few Projects We Have Worked On .
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {projects.map((project) => {
-            return (
-              <Col md={4} className="project-card">
-                <ProjectCard {...project}
-                  // imgPath={import(`../../Assets/Projects/${project.imgPath}`)}
-                  // isBlog={project.isBlog}
-                  // title={project.title}
-                  // description={project.description}
-                  // link={project.link}
-                />
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
-    </Container>
-  );
-}
+const Projects = () => (
+  <Section nopadding id="projects">
+    <SectionDivider />
+    <SectionTitle main>Projects</SectionTitle>
+    <GridContainer>
+      {projects.map((p, i) => {
+        return (
+          <BlogCard key={i}>
+          <Img src={p.image} />
+            <TitleContent>
+              <HeaderThree title>{p.title}</HeaderThree>
+              <Hr />
+            </TitleContent>
+            <CardInfo className="card-info">{p.description}</CardInfo>
+            <div>
+              <TitleContent>Stack</TitleContent>
+              <TagList>
+                {p.tags.map((t, i) => {
+                  return <Tag key={i}>{t}</Tag>;
+                })}
+              </TagList>
+            </div>
+            <UtilityList>
+              <ExternalLinks href={p.source}>Source</ExternalLinks>
+            </UtilityList>
+          </BlogCard>
+        );
+      })}
+    </GridContainer>
+  </Section>
+);
 
 export default Projects;
